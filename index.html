@@ -55,6 +55,17 @@
           }
         }
       }
+
+      function game() {
+        console.log("Welcome to Rock, Paper, Scissors!");
+        for (var i = 0; i < 5; i++) {
+          var userChoice = getUserChoice();
+          var computerChoice = computerPlay();
+          console.log(playRound(computerChoice, userChoice));
+        }
+      }
+
+      game();
     </script>
   </body>
 </html>
