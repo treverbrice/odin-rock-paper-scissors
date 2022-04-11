@@ -18,6 +18,34 @@
           return("scissors");
         }
       }
+
+      function playRound(computerSelection, playerSelection) {
+        if (computerSelection == "rock") {
+          if (playerSelection == "rock") {
+            return("You Tied!");
+          } else if (playerSelection == "paper") {
+            return("You Win! Paper covers rock");
+          } else {
+            return("You Lose! Rock crushes scissors");
+          }
+        } else if (computerSelection == "paper") {
+          if (playerSelection == "rock") {
+            return("You Lose! Paper covers rock");
+          } else if (playerSelection == "paper") {
+            return("You Tied!");
+          } else {
+            return("You Win! Scissors cuts paper");
+          }
+        } else {
+          if (playerSelection == "rock") {
+            return("You Win! Rock crushes scissors");
+          } else if (playerSelection == "paper") {
+            return("You Lose! Scissors cuts paper");
+          } else {
+            return("You Tied!");
+          }
+        }
+      }
     </script>
   </body>
 </html>
