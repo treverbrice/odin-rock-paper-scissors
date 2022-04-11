@@ -8,7 +8,7 @@
   <body>
     <script>
       function computerPlay() {
-        var selection = Math.floor(Math.random() * 3);
+        let selection = Math.floor(Math.random() * 3);
 
         if (selection == 0) {
           return("rock");
@@ -20,7 +20,7 @@
       }
 
       function getUserChoice() {
-        var choice = prompt("Rock, Paper, or Scissors?: ").toLowerCase();
+        let choice = prompt("Rock, Paper, or Scissors?: ").toLowerCase();
         const validChoices = ["rock", "paper", "scissors"];
         if (!validChoices.includes(choice)) {
           return(getUserChoice());
@@ -58,9 +58,9 @@
 
       function game() {
         console.log("Welcome to Rock, Paper, Scissors!");
-        for (var i = 0; i < 5; i++) {
-          var userChoice = getUserChoice();
-          var computerChoice = computerPlay();
+        for (let i = 0; i < 5; i++) {
+          let userChoice = getUserChoice();
+          let computerChoice = computerPlay();
           console.log(playRound(computerChoice, userChoice));
         }
       }
