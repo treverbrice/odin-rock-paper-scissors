@@ -7,7 +7,7 @@
 
   <body>
     <script>
-      function computerPlay() {
+      function getComputerChoice() {
         let selection = Math.floor(Math.random() * 3);
 
         if (selection == 0) {
@@ -19,8 +19,10 @@
         }
       }
 
+      //gets and validates users choice
       function getUserChoice() {
         let choice = prompt("Rock, Paper, or Scissors?: ").toLowerCase();
+        
         const validChoices = ["rock", "paper", "scissors"];
         if (!validChoices.includes(choice)) {
           return(getUserChoice());
@@ -56,16 +58,16 @@
         }
       }
 
-      function game() {
+      function playGame() {
         console.log("Welcome to Rock, Paper, Scissors!");
         for (let i = 0; i < 5; i++) {
           let userChoice = getUserChoice();
-          let computerChoice = computerPlay();
+          let computerChoice = getComputerChoice();
           console.log(playRound(computerChoice, userChoice));
         }
       }
 
-      game();
+      playGame();
     </script>
   </body>
 </html>
